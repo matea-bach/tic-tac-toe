@@ -14,6 +14,11 @@ function initializeGame() {
     let cells = document.querySelectorAll(".cell");
     for (let i = 0; i < cells.length; i++) {
         let cell = cells[i];
+        cell.addEventListener("click", function (e) {
+            console.log(e);
+            this.classList.add("cross");
+            console.log(this);
+        });
         console.log(cell);
     }
     console.log();
