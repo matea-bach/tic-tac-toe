@@ -5,6 +5,7 @@ window.onload = function () {
     initializeGame();
 }
 
+let shape = "cross";
 
 function handleClickCell() {
     console.log("Cell is clicked!")
@@ -16,8 +17,13 @@ function initializeGame() {
         let cell = cells[i];
         cell.addEventListener("click", function (e) {
             console.log(e);
-            this.classList.add("cross");
+            let currentTurn = shape === "cross" ? "circle" : "cross";
+            this.classList.add(currentTurn);
             console.log(this);
+
+            shape === "cross"
+                ? (shape = "circle")
+                : (shape = "cross");
         });
         console.log(cell);
     }
@@ -25,3 +31,12 @@ function initializeGame() {
 }
 
 // set up event listener handleclickCell to line 17
+// set up restart game button
+
+function restartGame() {
+    let button = document.getElementById("btn-restart")
+    button = document.location.href = "http://localhost:5500/";
+}
+
+
+//iterate through cells to remove values to restart game instead of using document.location, hardcode to cell class to initial state - which is going to "restart" the game
