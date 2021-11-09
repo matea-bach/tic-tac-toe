@@ -6,10 +6,7 @@ window.onload = function () {
 }
 
 let shape = "cross";
-
-function handleClickCell() {
-    console.log("Cell is clicked!")
-}
+let cells = document.querySelectorAll('.cell');
 
 function initializeGame() {
     let cells = document.querySelectorAll(".cell");
@@ -30,13 +27,23 @@ function initializeGame() {
     console.log();
 }
 
-// set up event listener handleclickCell to line 17
 // set up restart game button
+// set up event listener handleclickCell to line 17
 
 function restartGame() {
-    let button = document.getElementById("btn-restart")
-    button = document.location.href = "http://localhost:5500/";
-}
+    console.log(cells);
+    for (let i = 0; i < cells.length; i++) {
+        let cell = cells[i];
+        cell.classList.remove("cross", "circle");
+        console.log(cell.classList);
+    }
+
+};
 
 
+// alt + up/down moves a line
+// crtl + [ or ] indent or outdent line
+// crtl + D is multi-selection of elements of example
+//  alt + click multi-select cursor
+//ctrl +K and crtl + C add a line comment
 //iterate through cells to remove values to restart game instead of using document.location, hardcode to cell class to initial state - which is going to "restart" the game
