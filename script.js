@@ -40,7 +40,32 @@ function restartGame() {
 
 };
 
+const wins = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
+console.log(wins);
 
+function isWinner() {
+    for (let i = 0; i < wins.length; i++) {
+        console.log(wins[i]);
+
+        for (let j = 0; j < wins[i].length; j++) {
+            console.log(wins[i][j]);
+
+        }
+    }
+}
+
+isWinner();
+
+//nested for loop to go throguh subarray list; if won return out of function
 // alt + up/down moves a line
 // crtl + [ or ] indent or outdent line
 // crtl + D is multi-selection of elements of example

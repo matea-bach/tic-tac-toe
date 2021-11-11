@@ -40,7 +40,7 @@ h1{
 }
 
 .cross::before {
-    content: "\274C";
+    content: "⨯";
     font-size: 30px;
     display: flex;
     justify-content: center;
