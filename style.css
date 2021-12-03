@@ -40,7 +40,7 @@ h1{
 }
 
 .cross::before {
-    content: "⨯";
+    content: "\274C";
     font-size: 30px;
     display: flex;
     justify-content: center;
@@ -55,4 +55,8 @@ h1{
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.highlight {
+    background-color: burlywood;
 }
